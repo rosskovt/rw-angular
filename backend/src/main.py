@@ -1,9 +1,8 @@
+from .entities.entity import engine, Base, Session
+from .entities.exam import Exam, ExamSchema
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-from .entities.entity import Session, engine, Base
-
-from .entities.exam import Exam, ExamSchema
 
 app = Flask(__name__)
 CORS(app)
@@ -40,5 +39,4 @@ def add_exam():
     return jsonify(new_exam), 201
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':

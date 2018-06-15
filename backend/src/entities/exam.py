@@ -3,6 +3,7 @@ from sqlalchemy import Column, String
 from .entity import Entity, Base
 from marshmallow import Schema, fields
 
+
 class Exam(Entity, Base):
     __tablename__ = 'exams'
 
